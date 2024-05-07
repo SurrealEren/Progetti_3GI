@@ -136,6 +136,17 @@ def inputintpos(a,l1):
     return(x)
 
 def inputrealipos(a,l1):
+    ''''
+    Funzione che chiede un'input di tipo "float", il quale deve essere maggiore di un valore dato alla funzione (limite escluso)
+    
+    PARAMETRI:
+        -a: stringa di richiesta dell'input
+        -l1: valore minimo dell'input
+        
+    RITORNA:
+        -x: valore "int" valido inserito dall'utente
+    '''
+
     x=inputint(a)    #chiede un'input di tipo "float" all'utente
     while (x<l1):    #Continua a richiedere l'input all'utente finchè non è maggiore del valore dato, mandando sempre il messaggio d'errore
         x=inputreali("ERRORE ERRORE ERRORE!!!\nInserire un valore maggiore di {0}".format(l1))
