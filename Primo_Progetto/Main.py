@@ -1,5 +1,5 @@
 "Import dei moduli"
-import Funzioniinput
+from Funzioni import *
 import os
 
 ########################################################################
