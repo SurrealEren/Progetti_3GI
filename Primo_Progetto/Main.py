@@ -1,6 +1,6 @@
 "Import dei moduli"
-from Funzioni import Funzioni as f
 from Funzioni import Funzioniinput
+from Funzioni import FunzioniMain as f
 import os
 
 def menù():
@@ -39,6 +39,11 @@ def main():
             else:
                 filenuovo.write(orario[i])
         filenuovo.write("\nLe numero di ore buche del docente è: " + str(ore_buche))
+    elif scelta==3:
+        docente=Funzioniinput.inputstr("Inserire il nome del docente di cui si vuole sapere l'orario: ").upper()
+        docente20="{:20}".format(docente)
+        disponibilita=Ore_Disponibili(orario_docenti, docente20)
+        print()
     return
 
 ########################################################################
