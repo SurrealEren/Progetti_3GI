@@ -39,6 +39,8 @@ def main():
             #Creo il nuovo file in cui mettere il risultato dell'operazione
             filenuovo=open("Docenti della {}.txt".format(classe), "w")
         
+            filenuovo.write("Elenco dei docenti della {}:\n".format(classe))
+            
             #Ciclo per immetere nel file appena creato i nomi dei professori della classe chiesta
             for i in range(len(elenco)):
                 filenuovo.write("   -" + elenco[i] + "\n")
@@ -121,7 +123,7 @@ def main():
             
             #Chiudo il file
             filenuovo.close()
-                
+            
             #Mando un messaggio di conferma di creazione del file all'utente, con annesso il nome del file
             print("È stato creato nella cartella corrente il documento: \"Lista dei docenti.txt\"")
 
