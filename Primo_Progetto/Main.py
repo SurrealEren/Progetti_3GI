@@ -43,6 +43,9 @@ def main():
             for i in range(len(elenco)):
                 filenuovo.write("   -" + elenco[i] + "\n")
             
+            #Chiudo il file
+            filenuovo.close()
+            
             #Mando un messaggio di conferma di creazione del file all'utente, con annesso il nome del file
             print("È stato creato nella cartella corrente il documento: \"Docenti della {}.txt\"".format(classe))
         elif scelta==2:
@@ -72,6 +75,9 @@ def main():
             #Scrivo in fondo al file le ore buche del professore
             filenuovo.write("\nLe numero di ore buche del docente è: " + str(ore_buche))
             
+            #Chiudo il file
+            filenuovo.close()
+            
             #Mando un messaggio di conferma di creazione del file all'utente, con annesso il nome del file
             print("È stato creato nella cartella corrente il documento: \"Orario di {}.txt\"".format(docente))
         elif scelta==3:
@@ -89,13 +95,16 @@ def main():
             #Scrivo dentro al file la linea indicante il numero di ore disponibili di un professore 
             filenuovo.write("Le ore disponibili di {0}, sono: {1}".format(docente, disponibilita))
             
+            #Chiudo il file
+            filenuovo.close()
+            
             #Mando un messaggio di conferma di creazione del file all'utente, con annesso il nome del file
             print("È stato creato nella cartella corrente il documento: \"Disponibilità di {}.txt\"".format(docente))
         elif scelta==4:
             #Chiedo all'utente un'input di tipo stringa per la variabile giorno
             giorno=Funzioniinput.inputstr("Inserire le prime tre lettere del giorno: ").upper()
             
-            #Chiedo all'utente un'input di tipo intero per la variabile ora 
+            #Chiedo all'utente un'input di tipo intero per la variabile ora
             ora=Funzioniinput.inputint("Inserire l'ora come numero: ")
             
             #Chiamo la funzione per per ottenere i professori che hanno lezione un giorno specifico ad un'ora specifica, passando come parametri la matrice contenente gli orari di ogni docente, il giorno, e l'ora
@@ -106,8 +115,12 @@ def main():
             
             #Scrivo nel documento appena creato la lista dei docenti formattata tramite un ciclo
             filenuovo.write("Lista dei docenti disponibili il {0} alla {1}° ora:\n".format(giorno,ora))
+            
             for i in ListaDocenti:
                 filenuovo.write("   -" + i + "\n")
+            
+            #Chiudo il file
+            filenuovo.close()
                 
             #Mando un messaggio di conferma di creazione del file all'utente, con annesso il nome del file
             print("È stato creato nella cartella corrente il documento: \"Lista dei docenti.txt\"")
@@ -119,7 +132,7 @@ def main():
         Funzioniinput.spazivuoti(2)
         
         #Chiedo un'input di tipo stringa all'utente per ripetere il programma
-        while (rip!="S" or rip!="N"):
+        while (rip!="S" and rip!="N"):
             rip=Funzioniinput.inputstr("Vuoi usare un'altra funzione?\nSì[S]    No[N]\n").upper
         
         #Stampo due righe vuote per la formattazione
