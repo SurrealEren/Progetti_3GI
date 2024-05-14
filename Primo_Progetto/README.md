@@ -9,7 +9,9 @@ Funzioni:
 - menu:
 	Funzione che richiede all'utente la funzione che si desidera utilizzare:
 
-## FunzioniMain
+# Cartella `Funzioni`
+
+## `FunzioniMain.py`
 Funzioni presenti:
 - Elenco_Doc_Classe:
 - Orario_Docente
@@ -18,7 +20,7 @@ Funzioni presenti:
 - Docenti
 - Lettura_Righe
 
-## Funzioniinput
+## `Funzioniinput.py`
 - spazivuoti
 - inputint
 - inputreali
