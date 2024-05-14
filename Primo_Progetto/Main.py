@@ -3,7 +3,7 @@ from Funzioni import Funzioniinput
 from Funzioni import FunzioniMain as f
 import os
 
-def menù():
+def menu():
     scelta=Funzioniinput.inputintlim("Funzioni disponibili:\n   1)Lista dei docenti data una classe\n   2)L'orario di un docente e le sue ore totali\n  3)Cognome e nome di un docente dato un numero di ore disponibili\n  4)Elenco dei docenti data una certa ora o un certo giorno\nInserire il numero della funzione che si vuole eseguire: ",0,5)
     return (scelta)
 
@@ -23,7 +23,7 @@ def main():
     
     while rip=="S":        
         #Chiamo la funzione per generare il menù di scelta, e per acquisire il numero della funzione da eseguire
-        scelta=menù()
+        scelta=menu()
         
         #Funzione per la formattazione delle righe stampate sulla shell, stampa righe vuote
         Funzioniinput.spazivuoti(2)
