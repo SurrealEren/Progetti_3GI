@@ -117,15 +117,17 @@ def main():
         
         #Stampo due righe vuote per la formattazione
         Funzioniinput.spazivuoti(2)
+        
         #Chiedo un'input di tipo stringa all'utente per ripetere il programma
         while (rip!="S" or rip!="N"):
             rip=Funzioniinput.inputstr("Vuoi usare un'altra funzione?\nSì[S]    No[N]\n").upper
+        
         #Stampo due righe vuote per la formattazione
         Funzioniinput.spazivuoti(2)
-            
         
     #Stampo un messagio per segnalare la chiusura del programma
     print("Grazie per aver usato questo programma.\nScritto da: Perera Eshan Sandika Limal")
+    
     return
 
 ########################################################################
