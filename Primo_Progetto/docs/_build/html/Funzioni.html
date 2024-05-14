@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funzioni package &mdash; EsercitazioneOrario 3.12.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2c828074"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Main module" href="Main.html" />
+    <link rel="prev" title="Primo_Progetto" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            EsercitazioneOrario
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Primo_Progetto</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Funzioni package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Funzioni.FunzioniMain">Funzioni.FunzioniMain module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.FunzioniMain.Docente_Ora_Specifica"><code class="docutils literal notranslate"><span class="pre">Docente_Ora_Specifica()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.FunzioniMain.Docenti"><code class="docutils literal notranslate"><span class="pre">Docenti()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.FunzioniMain.Elenco_Doc_Classe"><code class="docutils literal notranslate"><span class="pre">Elenco_Doc_Classe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.FunzioniMain.Lettura_Righe"><code class="docutils literal notranslate"><span class="pre">Lettura_Righe()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.FunzioniMain.Orario_Docente"><code class="docutils literal notranslate"><span class="pre">Orario_Docente()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.FunzioniMain.Ore_Disponibili"><code class="docutils literal notranslate"><span class="pre">Ore_Disponibili()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Funzioni.Funzioniinput">Funzioni.Funzioniinput module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputbool"><code class="docutils literal notranslate"><span class="pre">inputbool()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputint"><code class="docutils literal notranslate"><span class="pre">inputint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputintlim"><code class="docutils literal notranslate"><span class="pre">inputintlim()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputintpos"><code class="docutils literal notranslate"><span class="pre">inputintpos()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputreali"><code class="docutils literal notranslate"><span class="pre">inputreali()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputrealilim"><code class="docutils literal notranslate"><span class="pre">inputrealilim()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputrealipos"><code class="docutils literal notranslate"><span class="pre">inputrealipos()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.inputstr"><code class="docutils literal notranslate"><span class="pre">inputstr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.lista"><code class="docutils literal notranslate"><span class="pre">lista()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Funzioni.Funzioniinput.spazivuoti"><code class="docutils literal notranslate"><span class="pre">spazivuoti()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-Funzioni">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Main.html">Main module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">EsercitazioneOrario</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Primo_Progetto</a></li>
+      <li class="breadcrumb-item active">Funzioni package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Funzioni.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="funzioni-package">
+<h1>Funzioni package<a class="headerlink" href="#funzioni-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-Funzioni.FunzioniMain">
+<span id="funzioni-funzionimain-module"></span><h2>Funzioni.FunzioniMain module<a class="headerlink" href="#module-Funzioni.FunzioniMain" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.FunzioniMain.Docente_Ora_Specifica">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.FunzioniMain.</span></span><span class="sig-name descname"><span class="pre">Docente_Ora_Specifica</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docenti</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">giorno</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ora</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/FunzioniMain.html#Docente_Ora_Specifica"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.FunzioniMain.Docente_Ora_Specifica" title="Link to this definition"></a></dt>
+<dd><p>Funzione per ottenere una lista contenente tutti i nomi dei docenti che hanno lezione un determinato giorno ad una determiata ora</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-docenti: la matrice contenente gli orari dei professori
+-giorno: giorno selezionato dall’utente, formato dalle prime tre lettere in maiuscolo
+-ora: ora selezionata dall’utente, formata da una variabile di tipo intero</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-ListaDocenti: una lista contenente i nomi di tutti i docenti che hanno lezione il giorno e l’ora specificati dall’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.FunzioniMain.Docenti">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.FunzioniMain.</span></span><span class="sig-name descname"><span class="pre">Docenti</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">righe</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/FunzioniMain.html#Docenti"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.FunzioniMain.Docenti" title="Link to this definition"></a></dt>
+<dd><p>Funzione che crea una matrice in cui le liste contenute sono gli orari di ogni professore con all’inizio il nome del professore</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-righe: una lista contenente le righe del file “TabellaGlobale.csv”</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-docente: la matrice contenente le liste formate dagli orari di ogni professore</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.FunzioniMain.Elenco_Doc_Classe">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.FunzioniMain.</span></span><span class="sig-name descname"><span class="pre">Elenco_Doc_Classe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">classe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orario_docenti</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/FunzioniMain.html#Elenco_Doc_Classe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.FunzioniMain.Elenco_Doc_Classe" title="Link to this definition"></a></dt>
+<dd><p>Funzione che ritorna la lista di docenti di una determinata classe</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-classe: la classe di cui dobbiamo trovare i docenti
+-orario_docenti: la matrice contenente gli orari dei professori</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-doc: la lista dei docenti della classe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.FunzioniMain.Lettura_Righe">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.FunzioniMain.</span></span><span class="sig-name descname"><span class="pre">Lettura_Righe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/FunzioniMain.html#Lettura_Righe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.FunzioniMain.Lettura_Righe" title="Link to this definition"></a></dt>
+<dd><p>Funzione per la lettura delle righe del file</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-file: il file aperto come stringa unica</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-righe: una lista contente tutte le righe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.FunzioniMain.Orario_Docente">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.FunzioniMain.</span></span><span class="sig-name descname"><span class="pre">Orario_Docente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docenti</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nomedocente</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/FunzioniMain.html#Orario_Docente"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.FunzioniMain.Orario_Docente" title="Link to this definition"></a></dt>
+<dd><p>Funzione che ritorna l’orario di un docente chiesto dall’utente e le sue ore in cui lavora</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-docenti: la matrice contenente gli orari dei professori
+-nomedocente: nome del docente di cui si vuole sapere l’orario</p>
+</dd>
+<dt>RTIORNA:</dt><dd><p>-orario: l’orario del professore di cui si vogliono sapere le ore
+-cont: numero di ore del professore</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.FunzioniMain.Ore_Disponibili">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.FunzioniMain.</span></span><span class="sig-name descname"><span class="pre">Ore_Disponibili</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">docenti</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nomedocente</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/FunzioniMain.html#Ore_Disponibili"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.FunzioniMain.Ore_Disponibili" title="Link to this definition"></a></dt>
+<dd><p>Funzione che ritorna il numero di ore disponibili di un professore</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-docenti: la matrice contenente gli orari dei professori
+-nomedocente: nome del docente di cui si vuole sapere l’orario</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-cont: numero di ore disponibili (D) del docente indicato</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-Funzioni.Funzioniinput">
+<span id="funzioni-funzioniinput-module"></span><h2>Funzioni.Funzioniinput module<a class="headerlink" href="#module-Funzioni.Funzioniinput" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputbool">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputbool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputbool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputbool" title="Link to this definition"></a></dt>
+<dd><p>Funzione che controlla l’input dell’utente per fare in modo che sia di tipo Booleano, con messaggio d’errore</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: stringa di richesta dell’input</p>
+</dd>
+<dt>RITORNI:</dt><dd><p>-x: valore Booleano che può essere “True” o “False”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputint">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputint" title="Link to this definition"></a></dt>
+<dd><p>Funzione che controlla l’input dell’utente per fare in modo che sia di tipo intero, con messaggio d’errore</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: Stringa per la richiesta dell’input</p>
+</dd>
+<dt>RITORNI:</dt><dd><p>-x: input di tipo INT ddell’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputintlim">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputintlim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputintlim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputintlim" title="Link to this definition"></a></dt>
+<dd><p>‘
+Funzione che chiede un’input di tipo “int”, il quale deve essere compreso tra due numeri dati dall’utente, limiti esclusi</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: stringa di richiesta dell’input
+-l1: primo limite dell’input (minore)
+-l2: secondo limite dell’input (maggiore)</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-x: valore “int” valido inserito dall’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputintpos">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputintpos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputintpos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputintpos" title="Link to this definition"></a></dt>
+<dd><p>‘
+Funzione che chiede un’input di tipo “int”, il quale deve essere maggiore di un valore dato alla funzione (limite escluso)</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: stringa di richiesta dell’input
+-l1: valore minimo dell’input</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-x: valore “int” valido inserito dall’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputreali">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputreali</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputreali"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputreali" title="Link to this definition"></a></dt>
+<dd><p>Funzione che controlla l’input dell’utente per fare in modo che sia di tipo reale, con messaggio d’errore</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: Stringa per la richiesta dell’input</p>
+</dd>
+<dt>RITORNI:</dt><dd><p>-x: input di tipo INT ddell’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputrealilim">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputrealilim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputrealilim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputrealilim" title="Link to this definition"></a></dt>
+<dd><p>‘
+Funzione che chiede un’input di tipo “float”, il quale deve essere compreso tra due numeri dati dall’utente, limiti esclusi</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: stringa di richiesta dell’input
+-l1: primo limite dell’input (minore)
+-l2: secondo limite dell’input (maggiore)</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-x: valore “int” valido inserito dall’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputrealipos">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputrealipos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputrealipos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputrealipos" title="Link to this definition"></a></dt>
+<dd><p>‘
+Funzione che chiede un’input di tipo “float”, il quale deve essere maggiore di un valore dato alla funzione (limite escluso)</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: stringa di richiesta dell’input
+-l1: valore minimo dell’input</p>
+</dd>
+<dt>RITORNA:</dt><dd><p>-x: valore “int” valido inserito dall’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.inputstr">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">inputstr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#inputstr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.inputstr" title="Link to this definition"></a></dt>
+<dd><p>Funzione che controlla l’input dell’utente per fare in modo che sia di tipo stringa, con messaggio d’errore</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-a: Stringa per la richiesta dell’input</p>
+</dd>
+<dt>RITORNI:</dt><dd><p>-x: input di tipo INT ddell’utente</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.lista">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">lista</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#lista"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.lista" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="Funzioni.Funzioniinput.spazivuoti">
+<span class="sig-prename descclassname"><span class="pre">Funzioni.Funzioniinput.</span></span><span class="sig-name descname"><span class="pre">spazivuoti</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/Funzioni/Funzioniinput.html#spazivuoti"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#Funzioni.Funzioniinput.spazivuoti" title="Link to this definition"></a></dt>
+<dd><p>Funzione che stampa n righe vuote</p>
+<dl class="simple">
+<dt>PARAMETRI:</dt><dd><p>-n: numero di righe vuote da stampare</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-Funzioni">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Funzioni" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Primo_Progetto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Main.html" class="btn btn-neutral float-right" title="Main module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Perera Eshan Sandika Limal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

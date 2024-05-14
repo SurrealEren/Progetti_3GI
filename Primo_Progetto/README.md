@@ -34,3 +34,6 @@ Funzioni presenti:
 
 ## Moduli esterni utilizzati
 - modulo `os.py`
+
+# Docomentazione
+Tutta la documentazione è disponibile nella cartella `_build`, la quale è dentro alla cartella `docs`.

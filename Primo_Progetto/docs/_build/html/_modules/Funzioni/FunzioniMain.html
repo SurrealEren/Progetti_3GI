@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funzioni.FunzioniMain &mdash; EsercitazioneOrario 3.12.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=2c828074"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            EsercitazioneOrario
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">Primo_Progetto</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EsercitazioneOrario</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">Funzioni.FunzioniMain</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for Funzioni.FunzioniMain</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1">########################################################################</span>
+
+<div class="viewcode-block" id="Elenco_Doc_Classe">
+<a class="viewcode-back" href="../../Funzioni.html#Funzioni.FunzioniMain.Elenco_Doc_Classe">[docs]</a>
+<span class="k">def</span> <span class="nf">Elenco_Doc_Classe</span><span class="p">(</span><span class="n">classe</span><span class="p">,</span> <span class="n">orario_docenti</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Funzione che ritorna la lista di docenti di una determinata classe</span>
+<span class="sd">    </span>
+<span class="sd">    PARAMETRI:</span>
+<span class="sd">        -classe: la classe di cui dobbiamo trovare i docenti</span>
+<span class="sd">        -orario_docenti: la matrice contenente gli orari dei professori</span>
+<span class="sd">        </span>
+<span class="sd">    RITORNA:</span>
+<span class="sd">        -doc: la lista dei docenti della classe</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="c1">#Creo la lista per la memorizzazione dei professori</span>
+    <span class="n">doc</span><span class="o">=</span><span class="p">[]</span>
+    
+    <span class="c1">#Ciclo per la scansione di tutti gli orari</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">orario_docenti</span><span class="p">)):</span>
+        
+        <span class="c1">#controllo per vedere se la classe che cerchiamo è dentro all&#39;orario del professore</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">classe</span><span class="p">)</span> <span class="ow">in</span> <span class="n">orario_docenti</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            
+            <span class="c1">#se la classe è contenuta nell&#39;orario, aggiungo il nome del professore alla lista</span>
+            <span class="n">doc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">orario_docenti</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">doc</span><span class="p">)</span></div>
+
+
+<span class="c1">########################################################################</span>
+
+<div class="viewcode-block" id="Orario_Docente">
+<a class="viewcode-back" href="../../Funzioni.html#Funzioni.FunzioniMain.Orario_Docente">[docs]</a>
+<span class="k">def</span> <span class="nf">Orario_Docente</span><span class="p">(</span><span class="n">docenti</span><span class="p">,</span><span class="n">nomedocente</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Funzione che ritorna l&#39;orario di un docente chiesto dall&#39;utente e le sue ore in cui lavora</span>
+<span class="sd">    </span>
+<span class="sd">    PARAMETRI:</span>
+<span class="sd">        -docenti: la matrice contenente gli orari dei professori</span>
+<span class="sd">        -nomedocente: nome del docente di cui si vuole sapere l&#39;orario</span>
+<span class="sd">    </span>
+<span class="sd">    RTIORNA:</span>
+<span class="sd">        -orario: l&#39;orario del professore di cui si vogliono sapere le ore</span>
+<span class="sd">        -cont: numero di ore del professore</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="c1">#Creo una lista nella quale salvare l&#39;orario del professore desiderato</span>
+    <span class="n">orario</span><span class="o">=</span><span class="p">[]</span>
+    
+    <span class="c1">#Ciclo per scansionare tutte le righe del file</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">docenti</span><span class="p">)):</span>
+        
+        <span class="c1">#Condizione per controllare se la riga attuale contiene il nome del docente desiderato</span>
+        <span class="k">if</span> <span class="n">nomedocente</span> <span class="ow">in</span> <span class="n">docenti</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            
+            <span class="c1">#Ciclo per salvare solo l&#39;orario del professore senza il nome</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">docenti</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+                <span class="n">orario</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">docenti</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+    
+    <span class="c1">#Inizializzo la variabile cont a int &quot;0&quot;, questa variabile servirà per contare le ore di lavoro di un professore</span>
+    <span class="n">cont</span><span class="o">=</span><span class="mi">0</span>
+    
+    <span class="c1">#Ciclo per scansionare ora per ora l&#39;orario del professore</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">orario</span><span class="p">)):</span>
+        
+        <span class="c1">#Condizione per controllare se l&#39;ora corrente sia buca o meno</span>
+        <span class="k">if</span> <span class="n">orario</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="s2">&quot;   &quot;</span><span class="p">:</span>
+            <span class="c1">#Se l&#39;ora non è vuota allora il contatore di ore di lavoro sale di uno</span>
+            <span class="n">cont</span><span class="o">+=</span><span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">orario</span><span class="p">,</span><span class="n">cont</span><span class="p">)</span></div>
+
+
+<span class="c1">########################################################################</span>
+
+<div class="viewcode-block" id="Ore_Disponibili">
+<a class="viewcode-back" href="../../Funzioni.html#Funzioni.FunzioniMain.Ore_Disponibili">[docs]</a>
+<span class="k">def</span> <span class="nf">Ore_Disponibili</span><span class="p">(</span><span class="n">docenti</span><span class="p">,</span><span class="n">nomedocente</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Funzione che ritorna il numero di ore disponibili di un professore</span>
+<span class="sd">    </span>
+<span class="sd">    PARAMETRI:</span>
+<span class="sd">        -docenti: la matrice contenente gli orari dei professori</span>
+<span class="sd">        -nomedocente: nome del docente di cui si vuole sapere l&#39;orario</span>
+<span class="sd">    </span>
+<span class="sd">    RITORNA:</span>
+<span class="sd">        -cont: numero di ore disponibili (D) del docente indicato</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    
+    <span class="c1">#Creo una lista nella quale salvare l&#39;orario del professore desiderato</span>
+    <span class="n">orario</span><span class="o">=</span><span class="p">[]</span>
+    
+    <span class="c1">#Ciclo per scansionare tutte le righe del file</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">docenti</span><span class="p">)):</span>
+        
+        <span class="c1">#Condizione per controllare se la riga attuale contiene il nome del docente desiderato</span>
+        <span class="k">if</span> <span class="n">nomedocente</span> <span class="ow">in</span> <span class="n">docenti</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            
+            <span class="c1">#Ciclo per salvare solo l&#39;orario del professore senza il nome</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">docenti</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>
+                <span class="n">orario</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">docenti</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+    
+    <span class="c1">#Inizializzo la variabile cont a int &quot;0&quot;, questa variabile servirà per contare le ore di lavoro di un professore</span>
+    <span class="n">cont</span><span class="o">=</span><span class="mi">0</span>
+    
+    <span class="c1">#Ciclo per scansionare ora per ora l&#39;orario del professore</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">orario</span><span class="p">)):</span>
+        
+        <span class="c1">#Condizione per controllare se l&#39;ora corrente sia disponibile o meno</span>
+        <span class="k">if</span> <span class="n">orario</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot; D &quot;</span><span class="p">:</span>
+            
+            <span class="c1">#Se l&#39;ora è disponibile allora il contatore di ore di lavoro sale di uno</span>
+            <span class="n">cont</span><span class="o">+=</span><span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">cont</span><span class="p">)</span></div>
+
+
+<span class="c1">########################################################################</span>
+
+<div class="viewcode-block" id="Docente_Ora_Specifica">
+<a class="viewcode-back" href="../../Funzioni.html#Funzioni.FunzioniMain.Docente_Ora_Specifica">[docs]</a>
+<span class="k">def</span> <span class="nf">Docente_Ora_Specifica</span><span class="p">(</span><span class="n">docenti</span> <span class="p">,</span><span class="n">giorno</span><span class="p">,</span> <span class="n">ora</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Funzione per ottenere una lista contenente tutti i nomi dei docenti che hanno lezione un determinato giorno ad una determiata ora</span>
+<span class="sd">    </span>
+<span class="sd">    PARAMETRI:</span>
+<span class="sd">        -docenti: la matrice contenente gli orari dei professori</span>
+<span class="sd">        -giorno: giorno selezionato dall&#39;utente, formato dalle prime tre lettere in maiuscolo</span>
+<span class="sd">        -ora: ora selezionata dall&#39;utente, formata da una variabile di tipo intero</span>
+<span class="sd">    </span>
+<span class="sd">    RITORNA:</span>
+<span class="sd">        -ListaDocenti: una lista contenente i nomi di tutti i docenti che hanno lezione il giorno e l&#39;ora specificati dall&#39;utente</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#Creo una lista per salvare i docenti che hanno lezione il giorno e l&#39;ora richiesta dall&#39;utente</span>
+    <span class="n">ListaDocenti</span><span class="o">=</span><span class="p">[]</span>
+    
+    <span class="c1">#Prima variabile per calcolare dove dovrò puntare dopo</span>
+    <span class="n">p1</span><span class="o">=</span><span class="mi">0</span>
+    
+    <span class="c1">#Condizione per capire quale giorno è stato selezionato e per modificare il puntatore</span>
+    <span class="k">if</span> <span class="n">giorno</span><span class="o">==</span><span class="s2">&quot;LUN&quot;</span><span class="p">:</span>
+        <span class="n">p1</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">elif</span> <span class="n">giorno</span><span class="o">==</span><span class="s2">&quot;MAR&quot;</span><span class="p">:</span>
+        <span class="n">p1</span><span class="o">=</span><span class="mi">7</span>
+    <span class="k">elif</span> <span class="n">giorno</span><span class="o">==</span><span class="s2">&quot;MER&quot;</span><span class="p">:</span>
+        <span class="n">p1</span><span class="o">=</span><span class="mi">7</span><span class="o">*</span><span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">giorno</span><span class="o">==</span><span class="s2">&quot;GIO&quot;</span><span class="p">:</span>
+        <span class="n">p1</span><span class="o">=</span><span class="mi">7</span><span class="o">*</span><span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">giorno</span><span class="o">==</span><span class="s2">&quot;VEN&quot;</span><span class="p">:</span>
+        <span class="n">p1</span><span class="o">=</span><span class="mi">7</span><span class="o">*</span><span class="mi">4</span>
+    
+    <span class="c1">#definisco il puntatore finale, in base al giorno e all&#39;ora    </span>
+    <span class="n">punt</span> <span class="o">=</span> <span class="n">p1</span> <span class="o">+</span> <span class="n">ora</span>
+    
+    <span class="c1">#Scansiono l&#39;orario di ogni professore</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">docenti</span><span class="p">:</span>
+        <span class="c1">#Condizione per capire se siamo all&#39;ultima linea o meno</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">:</span>
+            <span class="c1">#Condizione per capire se il professore ha un&#39;ora di lezione nel giorno e all&#39;ora richiesti dall&#39;utente</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="n">punt</span><span class="p">]</span><span class="o">!=</span><span class="s2">&quot;R&quot;</span> <span class="ow">and</span> <span class="n">i</span><span class="p">[</span><span class="n">punt</span><span class="p">]</span><span class="o">!=</span><span class="s2">&quot;   &quot;</span><span class="p">):</span>
+                <span class="c1">#Se il professore ha lezione allora aggiungo il nome del docente alla lista</span>
+                <span class="n">ListaDocenti</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">ListaDocenti</span><span class="p">)</span></div>
+
+
+<span class="c1">########################################################################</span>
+
+<div class="viewcode-block" id="Docenti">
+<a class="viewcode-back" href="../../Funzioni.html#Funzioni.FunzioniMain.Docenti">[docs]</a>
+<span class="k">def</span> <span class="nf">Docenti</span><span class="p">(</span><span class="n">righe</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Funzione che crea una matrice in cui le liste contenute sono gli orari di ogni professore con all&#39;inizio il nome del professore</span>
+<span class="sd">    </span>
+<span class="sd">    PARAMETRI:</span>
+<span class="sd">        -righe: una lista contenente le righe del file &quot;TabellaGlobale.csv&quot; </span>
+<span class="sd">    </span>
+<span class="sd">    RITORNA:</span>
+<span class="sd">        -docente: la matrice contenente le liste formate dagli orari di ogni professore</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#Mi creo una matrice per memorizzare le liste di orari </span>
+    <span class="n">docente</span><span class="o">=</span><span class="p">[]</span>
+    
+    <span class="c1">#Ciclo per creare e aggiungere alla matrice, le liste contententi gli orari dei professori</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)):</span>
+        <span class="n">docente</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">righe</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">docente</span><span class="p">)</span></div>
+
+
+<span class="c1">########################################################################</span>
+
+<div class="viewcode-block" id="Lettura_Righe">
+<a class="viewcode-back" href="../../Funzioni.html#Funzioni.FunzioniMain.Lettura_Righe">[docs]</a>
+<span class="k">def</span> <span class="nf">Lettura_Righe</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Funzione per la lettura delle righe del file</span>
+<span class="sd">    </span>
+<span class="sd">    PARAMETRI:</span>
+<span class="sd">        -file: il file aperto come stringa unica</span>
+<span class="sd">        </span>
+<span class="sd">    RITORNA:</span>
+<span class="sd">        -righe: una lista contente tutte le righe</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1">#Creazione della lista Righe nella quale saranno contenute le linee del file letto</span>
+    <span class="n">righe</span><span class="o">=</span><span class="p">[]</span>
+    
+    <span class="c1">#Leggo la prima riga</span>
+    <span class="n">riga</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    
+    <span class="c1">#Aggiungo le righe alla lista</span>
+    <span class="n">righe</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">riga</span><span class="p">:</span>
+        <span class="n">riga</span><span class="o">=</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">righe</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">riga</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">righe</span><span class="p">)</span></div>
+
+
+<span class="c1">########################################################################</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Perera Eshan Sandika Limal.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
