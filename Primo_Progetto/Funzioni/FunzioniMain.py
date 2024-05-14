@@ -124,6 +124,7 @@ def Docente_Ora_Specifica(docenti ,giorno, ora):
     RITORNA:
         -ListaDocenti: una lista contenente i nomi di tutti i docenti che hanno lezione il giorno e l'ora specificati dall'utente
     '''
+    
     #Creo una lista per salvare i docenti che hanno lezione il giorno e l'ora richiesta dall'utente
     ListaDocenti=[]
     
@@ -168,6 +169,7 @@ def Docenti(righe):
     RITORNA:
         -docente: la matrice contenente le liste formate dagli orari di ogni professore
     '''
+    
     #Mi creo una matrice per memorizzare le liste di orari 
     docente=[]
     
@@ -189,6 +191,7 @@ def Lettura_Righe(file):
     RITORNA:
         -righe: una lista contente tutte le righe
     '''
+    
     #Creazione della lista Righe nella quale saranno contenute le linee del file letto
     righe=[]
     
