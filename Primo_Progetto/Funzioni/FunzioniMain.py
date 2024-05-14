@@ -135,13 +135,13 @@ def Docente_Ora_Specifica(docenti ,giorno, ora):
     if giorno=="LUN":
         p1=0
     elif giorno=="MAR":
-        p1=7
+        p1=8
     elif giorno=="MER":
-        p1=7*2
+        p1=8*2
     elif giorno=="GIO":
-        p1=7*3
+        p1=8*3
     elif giorno=="VEN":
-        p1=7*4
+        p1=8*4
     
     #definisco il puntatore finale, in base al giorno e all'ora    
     punt = p1 + ora
