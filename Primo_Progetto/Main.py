@@ -114,7 +114,7 @@ def main():
             filenuovo=open("Lista dei docenti.txt", "w")
             
             #Scrivo nel documento appena creato la lista dei docenti formattata tramite un ciclo
-            filenuovo.write("Lista dei docenti disponibili il {0} alla {1}° ora:\n".format(giorno,ora))
+            filenuovo.write("Lista dei docenti che hanno lezione il {0} alla {1}° ora:\n".format(giorno,ora))
             
             for i in ListaDocenti:
                 filenuovo.write("   -" + i + "\n")
