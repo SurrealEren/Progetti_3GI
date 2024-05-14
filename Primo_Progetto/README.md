@@ -36,4 +36,4 @@ Funzioni presenti:
 - modulo `os.py`
 
 # Docomentazione
-Tutta la documentazione è disponibile nella cartella `_build`, la quale è dentro alla cartella `docs`.
+Tutta la documentazione è disponibile nella cartella `html`, la quale è contenuta dentro alla cartella `_build`, la quale a sua volta è contenuta dentro la cartella `docs`.
