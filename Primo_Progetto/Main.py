@@ -143,6 +143,8 @@ def main():
     #Stampo un messagio per segnalare la chiusura del programma
     print("Grazie per aver usato questo programma.\nScritto da: Perera Eshan Sandika Limal")
     
+    input()
+    
     return
 
 ########################################################################
