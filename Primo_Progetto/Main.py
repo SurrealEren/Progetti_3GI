@@ -4,7 +4,7 @@ from Funzioni import FunzioniMain as f
 import os
 
 def menu():
-    scelta=Funzioniinput.inputintlim("Funzioni disponibili:\n   1)Lista dei docenti data una classe\n   2)L'orario di un docente e le sue ore totali\n   3)Cognome e nome di un docente dato un numero di ore disponibili\n   4)Elenco dei docenti data una certa ora o un certo giorno\nInserire il numero della funzione che si vuole eseguire: ",0,5)
+    scelta=Funzioniinput.inputintlim("Funzioni disponibili:\n   1)Lista dei docenti data una classe\n   2)L'orario di un docente e le sue ore totali\n   3)Cognome e nome di un docente dato un numero di ore disponibili\n   4)Elenco dei docenti data una certa ora o un certo giorno\n\nInserire il numero della funzione che si vuole eseguire: ",0,5)
     return (scelta)
 
 ########################################################################
@@ -135,7 +135,7 @@ def main():
         
         #Chiedo un'input di tipo stringa all'utente per ripetere il programma
         while ((rip!="S") and (rip!="N")):
-            rip=Funzioniinput.inputstr("Vuoi usare un'altra funzione?\nSì[S]    No[N]\n").upper
+            rip=Funzioniinput.inputstr("Vuoi usare un'altra funzione?\nSì[S]    No[N]\n").upper()
         
         #Stampo due righe vuote per la formattazione
         Funzioniinput.spazivuoti(2)
