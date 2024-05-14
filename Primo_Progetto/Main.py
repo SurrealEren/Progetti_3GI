@@ -4,7 +4,7 @@ from Funzioni import FunzioniMain as f
 import os
 
 def menu():
-    scelta=Funzioniinput.inputintlim("Funzioni disponibili:\n   1)Lista dei docenti data una classe\n   2)L'orario di un docente e le sue ore totali\n  3)Cognome e nome di un docente dato un numero di ore disponibili\n  4)Elenco dei docenti data una certa ora o un certo giorno\nInserire il numero della funzione che si vuole eseguire: ",0,5)
+    scelta=Funzioniinput.inputintlim("Funzioni disponibili:\n   1)Lista dei docenti data una classe\n   2)L'orario di un docente e le sue ore totali\n   3)Cognome e nome di un docente dato un numero di ore disponibili\n   4)Elenco dei docenti data una certa ora o un certo giorno\nInserire il numero della funzione che si vuole eseguire: ",0,5)
     return (scelta)
 
 ########################################################################
