@@ -21,7 +21,7 @@ def main():
     #Creo una variabile per la ripetizione del programma
     rip="S"
     
-    while rip=="S":        
+    while rip=="S":      
         #Chiamo la funzione per generare il menù di scelta, e per acquisire il numero della funzione da eseguire
         scelta=menu()
         
